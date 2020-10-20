@@ -17,23 +17,23 @@ class VehicleSpecs implements java.io.Serializable {
 
 		private static final long serialVersionUID = 7852158612382656008L;
 		private int NumberofFrontWheels = 2;
-		private int NumberofRearWheels = 2;
+		private int NumberofBackWheels = 2;
 		private int NumberofLugNuts = 0;
 		private int LugnutTorqueFront = 0;
 		private int LugnutTorqueBack = 0;
-		private String VehicleName = "";
+		private String VehicleName = null;
 		
 		public CarSpecs() {}
 		
 		public int getNumberFrontWheels() {return NumberofFrontWheels;}
-		public int getNumberRearWheels() {return NumberofRearWheels;}
+		public int getNumberBackWheels() {return NumberofBackWheels;}
 		public int getNumberofLugNuts() {return NumberofLugNuts;}
 		public int getTorqueFront() {return LugnutTorqueFront;}
 		public int getTorqueBack() {return LugnutTorqueBack;}
 		public String getVehicleName() {return VehicleName;}
 		public void setNumberofLugnuts(int Lugnuts) {this.NumberofLugNuts = Lugnuts;}
 		public void setNumberFrontWheels(int FrontWheel) {this.NumberofFrontWheels = FrontWheel;}
-		public void setNumberofBackWheels(int BackWheel) {this.NumberofRearWheels = BackWheel;}
+		public void setNumberofBackWheels(int BackWheel) {this.NumberofBackWheels = BackWheel;}
 		public void setLugnutTorqueFront(int TorqueFront) {this.LugnutTorqueFront = TorqueFront;}
 		public void setLugnutTorqueBack(int TorqueBack) {this.LugnutTorqueBack = TorqueBack;}
 		public void setVehicleName (String Name) {this.VehicleName = Name;}
@@ -42,7 +42,7 @@ class VehicleSpecs implements java.io.Serializable {
 	 class TruckSpecs extends VehicleSpecs implements java.io.Serializable{
 		private static final long serialVersionUID = -188298284372495700L;
 		private int NumberofFrontWheels = 2;
-		private int NumberofRearWheels = 2;
+		private int NumberofBackWheels = 2;
 		private int NumberofMiddleWheels = 2;
 		private int NumberofLugNuts;
 		private int LugnutTorqueFront;
@@ -54,7 +54,7 @@ class VehicleSpecs implements java.io.Serializable {
 		
 		public int getNumberFrontWheels() {return NumberofFrontWheels;}
 		public int getNumberMiddleWheels() {return NumberofMiddleWheels;}
-		public int getNumberRearWheels() {return NumberofRearWheels;}
+		public int getNumberBackWheels() {return NumberofBackWheels;}
 		public int getNumberofLugNuts() {return NumberofLugNuts;}
 		public int getTorqueFront() {return LugnutTorqueFront;}
 		public int getTorqueMiddle() {return LugnutTorqueMiddle;}
@@ -63,7 +63,7 @@ class VehicleSpecs implements java.io.Serializable {
 		public void setNumberofLugnuts(int Lugnuts) {this.NumberofLugNuts = Lugnuts;}
 		public void setNumberFrontWheels(int FrontWheel) {this.NumberofFrontWheels = FrontWheel;}
 		public void setNumberMiddleWheels(int MiddleWheel) {this.NumberofMiddleWheels = MiddleWheel;}
-		public void setNumberofBackWheels(int BackWheel) {this.NumberofRearWheels = BackWheel;}
+		public void setNumberofBackWheels(int BackWheel) {this.NumberofBackWheels = BackWheel;}
 		public void setLugnutTorqueFront(int TorqueFront) {this.LugnutTorqueFront = TorqueFront;}
 		public void setLugnutTorqueMiddle(int TorqueMiddle) {this.LugnutTorqueMiddle = TorqueMiddle;}
 		public void setLugnutTorqueBack(int TorqueBack) {this.LugnutTorqueBack = TorqueBack;}
@@ -72,22 +72,22 @@ class VehicleSpecs implements java.io.Serializable {
 	 class BikeSpecs extends VehicleSpecs implements java.io.Serializable{
 		static final long serialVersionUID = 3227233657680285111L;
 		private int NumberofFrontWheels = 1;
-		private int NumberofRearWheels = 1;
-		private int NumberofLugNuts;
-		private int LugnutTorqueFront;
-		private int LugnutTorqueBack;
-		private String VehicleName = "";
+		private int NumberofBackWheels = 1;
+		private int NumberofLugNuts = 0;
+		private int LugnutTorqueFront = 0;
+		private int LugnutTorqueBack = 0;
+		private String VehicleName = null;
 		
 		public BikeSpecs() {}
 		public int getNumberFrontWheels() {return NumberofFrontWheels;}
-		public int getNumberRearWheels() {return NumberofRearWheels;}
+		public int getNumberBackWheels() {return NumberofBackWheels;}
 		public int getNumberofLugNuts() {return NumberofLugNuts;}
 		public int getTorqueFront() {return LugnutTorqueFront;}
 		public int getTorqueBack() {return LugnutTorqueBack;}
 		public String getVehicleName() {return VehicleName;}
 		public void setNumberofLugnuts(int Lugnuts) {this.NumberofLugNuts = Lugnuts;}
 		public void setNumberFrontWheels(int FrontWheel) {this.NumberofFrontWheels = FrontWheel;}
-		public void setNumberofBackWheels(int BackWheel) {this.NumberofRearWheels = BackWheel;}
+		public void setNumberofBackWheels(int BackWheel) {this.NumberofBackWheels = BackWheel;}
 		public void setLugnutTorqueFront(int TorqueFront) {this.LugnutTorqueFront = TorqueFront;}
 		public void setLugnutTorqueBack(int TorqueBack) {this.LugnutTorqueBack = TorqueBack;}
 		public void setVehicleName (String Name) {this.VehicleName = Name;}
@@ -96,19 +96,19 @@ class VehicleSpecs implements java.io.Serializable {
 	 class SpecialVehicle extends VehicleSpecs implements java.io.Serializable{
 		private static final long serialVersionUID = 1440731119553727152L;
 		private int NumberofFrontWheels = 0;
-		private int NumberofRearWheels = 0;
+		private int NumberofBackWheels = 0;
 		private int NumberofMiddleWheels = 0;
 		private int NumberofLugNuts = 0;
 		private int LugnutTorqueFront = 0;
 		private int LugnutTorqueMiddle = 0;
 		private int LugnutTorqueBack = 0;
-		private String VehicleName = "";
+		private String VehicleName = null;
 		
 		public SpecialVehicle() {}
 		
 		public int getNumberFrontWheels() {return NumberofFrontWheels;}
 		public int getNumberMiddleWheels() {return NumberofMiddleWheels;}
-		public int getNumberRearWheels() {return NumberofRearWheels;}
+		public int getNumberBackWheels() {return NumberofBackWheels;}
 		public int getNumberofLugNuts() {return NumberofLugNuts;}
 		public int getTorqueFront() {return LugnutTorqueFront;}
 		public int getTorqueMiddle() {return LugnutTorqueMiddle;}
@@ -117,7 +117,7 @@ class VehicleSpecs implements java.io.Serializable {
 		public void setNumberofLugnuts(int Lugnuts) {this.NumberofLugNuts = Lugnuts;}
 		public void setNumberFrontWheels(int FrontWheel) {this.NumberofFrontWheels = FrontWheel;}
 		public void setNumberMiddleWheels(int MiddleWheel) {this.NumberofMiddleWheels = MiddleWheel;}
-		public void setNumberofBackWheels(int BackWheel) {this.NumberofRearWheels = BackWheel;}
+		public void setNumberofBackWheels(int BackWheel) {this.NumberofBackWheels = BackWheel;}
 		public void setLugnutTorqueFront(int TorqueFront) {this.LugnutTorqueFront = TorqueFront;}
 		public void setLugnutTorqueMiddle(int TorqueMiddle) {this.LugnutTorqueMiddle = TorqueMiddle;}
 		public void setLugnutTorqueBack(int TorqueBack) {this.LugnutTorqueBack = TorqueBack;}
@@ -212,6 +212,7 @@ class VehicleSpecs implements java.io.Serializable {
 		ArrayList<SpecialVehicle> SpecialList = new ArrayList<SpecialVehicle>();
 		SpecialList.add(Vehicle.new SpecialVehicle());
 		VehicleSpecs.SpecialVehicle SpecialList1 = SpecialList.get(0);
+		SpecialList1.setNumberofLugnuts(3);
 		SpecialList1.setLugnutTorqueBack(50);
 		SpecialList1.setLugnutTorqueFront(50);
 		SpecialList1.setNumberFrontWheels(1);
