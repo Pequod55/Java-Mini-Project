@@ -7,25 +7,25 @@ package com.SmartSocketWrench;
 
 import java.util.ArrayList;
 
-class VehicleSpecs implements java.io.Serializable {
+class VehicleSpecs implements java.io.Serializable {                                                   //created a new class vehicle in which all Vehicles belong to
 
-	private static final long serialVersionUID = 647455140207721769L;
-	static VehicleSpecs Vehicle = new VehicleSpecs();
+	private static final long serialVersionUID = 647455140207721769L;								   //I am not completely sure what this does but eclipse wanted a serial id attached to all classes
+	static VehicleSpecs Vehicle = new VehicleSpecs();												   //Create a basic Vehicle which belongs to class VehicleSpecs and will be used to make objects of the subclasses 
 	
 	
-	class CarSpecs extends VehicleSpecs implements java.io.Serializable{
+	class CarSpecs extends VehicleSpecs implements java.io.Serializable{							   //Create a class for all Cars	
 
 		private static final long serialVersionUID = 7852158612382656008L;
-		private int NumberofFrontWheels = 2;
+		private int NumberofFrontWheels = 2;														   //Create all variables associated with Cars, and initialize them to avoid errors
 		private int NumberofBackWheels = 2;
 		private int NumberofLugNuts = 0;
 		private int LugnutTorqueFront = 0;
 		private int LugnutTorqueBack = 0;
 		private String VehicleName = null;
 		
-		public CarSpecs() {}
-		
-		public int getNumberFrontWheels() {return NumberofFrontWheels;}
+		public CarSpecs() {}																		   //Created Constructor
+			
+		public int getNumberFrontWheels() {return NumberofFrontWheels;}                                //Create Getter and Setter for all variables of the class
 		public int getNumberBackWheels() {return NumberofBackWheels;}
 		public int getNumberofLugNuts() {return NumberofLugNuts;}
 		public int getTorqueFront() {return LugnutTorqueFront;}
@@ -39,9 +39,9 @@ class VehicleSpecs implements java.io.Serializable {
 		public void setVehicleName (String Name) {this.VehicleName = Name;}
 	}
 		
-	 class TruckSpecs extends VehicleSpecs implements java.io.Serializable{
+	 class TruckSpecs extends VehicleSpecs implements java.io.Serializable{                           //Create a class for all Trucks
 		private static final long serialVersionUID = -188298284372495700L;
-		private int NumberofFrontWheels = 2;
+		private int NumberofFrontWheels = 2;                                                          //Create all variables associated with Trucks, and initialize them to avoid errors
 		private int NumberofBackWheels = 2;
 		private int NumberofMiddleWheels = 2;
 		private int NumberofLugNuts;
@@ -50,9 +50,9 @@ class VehicleSpecs implements java.io.Serializable {
 		private int LugnutTorqueBack;
 		private String VehicleName;
 		
-		public TruckSpecs() {}
+		public TruckSpecs() {}																         //Created Constructor
 		
-		public int getNumberFrontWheels() {return NumberofFrontWheels;}
+		public int getNumberFrontWheels() {return NumberofFrontWheels;}                              //Create Getter and Setter for all variables of the class
 		public int getNumberMiddleWheels() {return NumberofMiddleWheels;}
 		public int getNumberBackWheels() {return NumberofBackWheels;}
 		public int getNumberofLugNuts() {return NumberofLugNuts;}
@@ -69,17 +69,17 @@ class VehicleSpecs implements java.io.Serializable {
 		public void setLugnutTorqueBack(int TorqueBack) {this.LugnutTorqueBack = TorqueBack;}
 		public void setVehicleName (String Name) {this.VehicleName = Name;}
 	 }
-	 class BikeSpecs extends VehicleSpecs implements java.io.Serializable{
+	 class BikeSpecs extends VehicleSpecs implements java.io.Serializable{					        //Create a class for all Bikes
 		static final long serialVersionUID = 3227233657680285111L;
-		private int NumberofFrontWheels = 1;
+		private int NumberofFrontWheels = 1;                                                        //Create all variables associated with Bikes, and initialize them to avoid errors
 		private int NumberofBackWheels = 1;
 		private int NumberofLugNuts = 0;
 		private int LugnutTorqueFront = 0;
 		private int LugnutTorqueBack = 0;
 		private String VehicleName = null;
 		
-		public BikeSpecs() {}
-		public int getNumberFrontWheels() {return NumberofFrontWheels;}
+		public BikeSpecs() {}                                                                       //Created Constructor
+		public int getNumberFrontWheels() {return NumberofFrontWheels;}                             //Create Getter and Setter for all variables of the class
 		public int getNumberBackWheels() {return NumberofBackWheels;}
 		public int getNumberofLugNuts() {return NumberofLugNuts;}
 		public int getTorqueFront() {return LugnutTorqueFront;}
@@ -93,9 +93,9 @@ class VehicleSpecs implements java.io.Serializable {
 		public void setVehicleName (String Name) {this.VehicleName = Name;}
 	 }
 	 
-	 class SpecialVehicle extends VehicleSpecs implements java.io.Serializable{
+	 class SpecialVehicle extends VehicleSpecs implements java.io.Serializable{					   //Create a class for all Special vehicles that don't fit into the above classes 
 		private static final long serialVersionUID = 1440731119553727152L;
-		private int NumberofFrontWheels = 0;
+		private int NumberofFrontWheels = 0;													   //Create all variables associated with Bikes, and initialize them to avoid errors
 		private int NumberofBackWheels = 0;
 		private int NumberofMiddleWheels = 0;
 		private int NumberofLugNuts = 0;
@@ -104,9 +104,9 @@ class VehicleSpecs implements java.io.Serializable {
 		private int LugnutTorqueBack = 0;
 		private String VehicleName = null;
 		
-		public SpecialVehicle() {}
+		public SpecialVehicle() {}                                                                 //Created Constructor
 		
-		public int getNumberFrontWheels() {return NumberofFrontWheels;}
+		public int getNumberFrontWheels() {return NumberofFrontWheels;}							   //Create Getter and Setter for all variables of the class
 		public int getNumberMiddleWheels() {return NumberofMiddleWheels;}
 		public int getNumberBackWheels() {return NumberofBackWheels;}
 		public int getNumberofLugNuts() {return NumberofLugNuts;}
@@ -125,9 +125,9 @@ class VehicleSpecs implements java.io.Serializable {
 		
 	 }
 	 
-	public static ArrayList<VehicleSpecs.CarSpecs> PopulateCarList() {
-		 ArrayList<CarSpecs> CarsList = new ArrayList<CarSpecs>();
-		 CarsList.add(Vehicle.new CarSpecs());
+	public static ArrayList<VehicleSpecs.CarSpecs> PopulateCarList() {							//Created and array list for Cars and added 3 basic types using setters
+		 ArrayList<CarSpecs> CarsList = new ArrayList<CarSpecs>();								//This is a function as the main class will call this to create all the array lists for the first time, 
+		 CarsList.add(Vehicle.new CarSpecs());													//once initialized the Interface class can add more vehicles to the array list 
 		 VehicleSpecs.CarSpecs CarsList1= CarsList.get(0);
 		 CarsList1.setVehicleName("Light Car");
 		 CarsList1.setLugnutTorqueFront(60);
@@ -152,7 +152,7 @@ class VehicleSpecs implements java.io.Serializable {
 
 		 return CarsList;
 	 }	
-	public static ArrayList<VehicleSpecs.TruckSpecs> PopulateTruckList(){
+	public static ArrayList<VehicleSpecs.TruckSpecs> PopulateTruckList(){					//Created and array list for Trucks and added 3 basic types using setters
 		
 		ArrayList<TruckSpecs> TrucksList = new ArrayList<TruckSpecs>();
 		
@@ -182,7 +182,7 @@ class VehicleSpecs implements java.io.Serializable {
 		
 		return TrucksList;
 	}
-	public static ArrayList<VehicleSpecs.BikeSpecs> PopulateBikeList(){
+	public static ArrayList<VehicleSpecs.BikeSpecs> PopulateBikeList(){                    //Created and array list for Bikes and added 3 basic types using setters
 		ArrayList<BikeSpecs> BikesList = new ArrayList<BikeSpecs>();
 				
 		BikesList.add(Vehicle.new BikeSpecs());
@@ -208,7 +208,7 @@ class VehicleSpecs implements java.io.Serializable {
 				
 		return BikesList;
 	}
-	public static ArrayList<VehicleSpecs.SpecialVehicle> PupulateSpecialList(){
+	public static ArrayList<VehicleSpecs.SpecialVehicle> PupulateSpecialList(){         //Created and array list for Special Vehicles and added 3 basic types using setters
 		ArrayList<SpecialVehicle> SpecialList = new ArrayList<SpecialVehicle>();
 		SpecialList.add(Vehicle.new SpecialVehicle());
 		VehicleSpecs.SpecialVehicle SpecialList1 = SpecialList.get(0);
