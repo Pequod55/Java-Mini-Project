@@ -6,4 +6,5 @@ Things that I will work on after finishing basic functions:
 1. Adding try catches to all input fields
 2. Having a Screen interface (such as gui) instead of command line
 3. Xml for saving vehicles instead of arraylists, since they are volatile as of now
-4. Actual sensors
+4. Variable number of lugnuts per tire
+5. Actual sensors
